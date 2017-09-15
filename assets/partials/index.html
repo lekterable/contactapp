@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>Wszystkie kontakty</h1>
+</div>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <th>Imię</th>
+      <th>Email</th>
+      <th>Telefon</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr ng-repeat='contact in contacts | filter : search track by $index'>
+        <td>{{contact.name}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.phone}}</td>
+        <td><a href="/contact/{{contact._id}}" class="btn btn-default btn-xs">Pokaż</a><button class="btn btn-danger btn-xs" ng-click='delete($index)'>Usuń</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
