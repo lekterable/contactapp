@@ -75,7 +75,7 @@ angular.module('App', ['ngRoute', 'ngSanitize','mgcrea.ngStrap', 'ngAnimate', 'n
 })
 .filter('paragraph', function(){
     return function(input){
-        return (input) ? input.replace(/\\n/g, '<br />') : 'elko';
+        return (input) ? input.replace(/\\n/g, '<br />') : '';
     };
 })
 .directive('editable', function () {
