@@ -1,6 +1,6 @@
 angular.module('App', ['ngRoute', 'ngSanitize','mgcrea.ngStrap', 'ngAnimate', 'ngResource'])
 .factory('contacts', function contactsFactory($resource, $http) {
-  let Resource = $resource('http://localhost:3000/contact/:id', {id: '@id'},
+  let Resource = $resource('/contact/:id', {id: '@id'},
   {
     update: {method: 'PUT'}
   })
