@@ -7,7 +7,7 @@ let app = express()
 
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'assets')))
-app.use(require('./assets/routes/contact.js'))
+app.use('/api', require('./assets/routes/contact.js'))
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/contactsapp',{useMongoClient: true},()=>{
   console.log('Połączono z bazą')
