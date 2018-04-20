@@ -21,5 +21,4 @@ let ContactSchema = mongoose.Schema({
     type: String
   }
 })
-
 module.exports = mongoose.model('Contact', ContactSchema)

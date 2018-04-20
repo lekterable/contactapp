@@ -29,8 +29,8 @@ angular.module('App', ['ngRoute', 'ngSanitize','mgcrea.ngStrap', 'ngAnimate', 'n
 })
 .controller('IndexCtrl', function($scope, contacts, $alert, $http) {
   let deleteAlert = $alert({
-    title:'Usunięto',
-    content:'Pomyślnie usunięto kontakt',
+    title:'Deleted!',
+    content:'Contact successfully deleted',
     type:'success',
     container:'#alertContainer',
     duration: 2,
@@ -48,8 +48,8 @@ angular.module('App', ['ngRoute', 'ngSanitize','mgcrea.ngStrap', 'ngAnimate', 'n
 })
 .controller('AddCtrl', function($scope, contacts, $alert) {
   let addAlert = $alert({
-    title: 'Dodano!',
-    content: 'Pomyślnie dodano kontakt',
+    title: 'Added!',
+    content: 'Contact successfully added',
     type: 'success',
     container: '#alertContainer',
     duration: 2,

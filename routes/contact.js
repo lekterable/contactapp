@@ -1,5 +1,5 @@
 let router = require('express').Router()
-let Contact = require('../models/contact.js')
+let Contact = require('../models/Contact.js')
 router.delete('/contact/:id',(req, res)=>{
   Contact.remove({_id:req.params.id}, (err)=>{
     if(err)
@@ -53,5 +53,4 @@ router.put('/contact', (req, res)=>{
     res.json(contact)
   })
 })
-
 module.exports = router

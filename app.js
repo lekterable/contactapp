@@ -7,10 +7,10 @@ let app = express()
 
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'assets')))
-app.use('/api', require('./assets/routes/contact.js'))
+app.use('/api', require('./routes/contact.js'))
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/contactsapp',{useMongoClient: true},()=>{
-  console.log('Połączono z bazą')
+  console.log('Connected to the database')
 })
 
 app.get('*',(req, res)=>{
@@ -18,5 +18,5 @@ app.get('*',(req, res)=>{
 })
 
 app.listen(process.env.PORT || 3000, ()=>{
-  console.log('Serwer nasłuchuje na porcie 3000')
+  console.log('Server is running on port 3000')
 })

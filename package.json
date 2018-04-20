@@ -1,12 +1,12 @@
 {
-  "name": "chapter2",
+  "name": "contactapp",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app"
   },
-  "author": "",
+  "author": "Kornel Dubieniecki",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.1",
